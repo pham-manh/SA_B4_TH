@@ -1,18 +1,9 @@
 package com.example.th_b4_sa.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 @Entity
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@Table(name = "chungnhan")
+@Table(name = "chungnhan", schema = "manhdev")
 public class Chungnhan {
 	@EmbeddedId
 	private ChungnhanId id;

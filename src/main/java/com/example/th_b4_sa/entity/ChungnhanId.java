@@ -11,7 +11,7 @@ import java.util.Objects;
 
 @Embeddable
 public class ChungnhanId implements Serializable {
-	private static final long serialVersionUID = 8748536950708762464L;
+	private static final long serialVersionUID = 8424958978854229389L;
 	@Size(max = 9)
 	@NotNull
 	@Column(name = "MaNV", nullable = false, length = 9)
@@ -21,21 +21,6 @@ public class ChungnhanId implements Serializable {
 	@Column(name = "MaMB", nullable = false)
 	private Integer maMB;
 	
-	public String getMaNV () {
-		return maNV;
-	}
-	
-	public void setMaNV (String maNV) {
-		this.maNV = maNV;
-	}
-	
-	public Integer getMaMB () {
-		return maMB;
-	}
-	
-	public void setMaMB (Integer maMB) {
-		this.maMB = maMB;
-	}
 	
 	@Override
 	public boolean equals (Object o) {

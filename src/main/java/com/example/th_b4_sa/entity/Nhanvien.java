@@ -1,22 +1,20 @@
 package com.example.th_b4_sa.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
-@Data
-@Builder
-@NoArgsConstructor
+@Table(name = "nhanvien", schema = "manhdev")
 @AllArgsConstructor
-@Table(name = "nhanvien")
+@NoArgsConstructor
+@Getter
+@Setter
+@Builder
+@ToString
 public class Nhanvien {
 	@Id
 	@Size(max = 9)
@@ -30,5 +28,12 @@ public class Nhanvien {
 	@Column(name = "Luong")
 	private Integer luong;
 	
-
+	@ManyToMany
+	@JoinTable(name = "chungnhan",
+			joinColumns = @JoinColumn(name = "MaNV"),
+			inverseJoinColumns = @JoinColumn(name = "MaMB"))
+	@ToString.Exclude
+	private Set<Maybay> maybays = new LinkedHashSet<>();
+	
+	
 }

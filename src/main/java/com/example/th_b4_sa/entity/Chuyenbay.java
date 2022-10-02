@@ -1,6 +1,7 @@
 package com.example.th_b4_sa.entity;
 
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,13 +10,10 @@ import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import java.time.LocalTime;
 
-@Data
 @Entity
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
-@Table(name = "chuyenbay")
+@Table(name = "chuyenbay", schema = "manhdev")
+@AllArgsConstructor@NoArgsConstructor
+@Getter@Setter@Builder@ToString
 public class Chuyenbay {
 	@Id
 	@Size(max = 5)
@@ -41,5 +39,8 @@ public class Chuyenbay {
 	
 	@Column(name = "ChiPhi")
 	private Integer chiPhi;
+	
+
+	
 	
 }

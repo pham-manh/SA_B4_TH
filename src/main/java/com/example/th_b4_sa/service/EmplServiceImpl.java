@@ -14,4 +14,8 @@ public class EmplServiceImpl {
 	public List<Nhanvien> listSalaryLower (int maxSalary){
 		return employeeReponsitpry.listSalaryLower(maxSalary);
 	}
+	
+	public Double getTotalSalaryEmployee(){
+		return employeeReponsitpry.getTotalSalaryEmployee();
+	}
 }

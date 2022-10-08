@@ -32,7 +32,6 @@ public class Nhanvien {
 	@JoinTable(name = "chungnhan",
 			joinColumns = @JoinColumn(name = "MaNV"),
 			inverseJoinColumns = @JoinColumn(name = "MaMB"))
-	@ToString.Exclude
 	private Set<Maybay> maybays = new LinkedHashSet<>();
 	
 	

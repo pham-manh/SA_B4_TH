@@ -1,6 +1,7 @@
 package com.example.th_b4_sa;
 
 import com.example.th_b4_sa.service.AirPlaneServiceImpl;
+import com.example.th_b4_sa.service.CertificationImpl;
 import com.example.th_b4_sa.service.EmplServiceImpl;
 import com.example.th_b4_sa.service.FlightServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +15,10 @@ public class ThB4SaApplication implements CommandLineRunner {
 	FlightServiceImpl flightService;
 	@Autowired
 	AirPlaneServiceImpl airPlaneService;
-	
 	@Autowired
 	EmplServiceImpl emplService;
+	@Autowired
+	CertificationImpl certification;
 	
 	public static void main (String[] args) {
 		SpringApplication.run(ThB4SaApplication.class, args);
@@ -31,18 +33,27 @@ public class ThB4SaApplication implements CommandLineRunner {
 //		System.out.println("----CÂU 2----");
 //		airPlaneService.listFlyRangeGreater(10000).forEach(System.out::println);
 //		System.out.println("==========================================================================================");
-//		System.out.println("----CÂU 3---");
+//		System.out.println("----CÂU 3----");
 //		emplService.listSalaryLower(10000).forEach(System.out::println);
 //		System.out.println("==========================================================================================");
-//		System.out.println("----CÂU 4---");
+//		System.out.println("----CÂU 4----");
 //		flightService.listFlightPathRangeBeetwen(10000,8000).forEach(System.out::println);
-		System.out.println("==========================================================================================");
-		System.out.println("----CÂU 5---");
-		System.out.println(flightService.contBYStartAndEndAirPortName("sgn","bmv"));
 //		System.out.println("==========================================================================================");
-//		System.out.println("----CÂU 6---");
+//		System.out.println("----CÂU 5----");
+//		System.out.println(flightService.contBYStartAndEndAirPortName("sgn","bmv"));
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 6----");
 //		System.out.println(flightService.contBYStartAirPortName("sgn"));
 //		System.out.println("==========================================================================================");
-//		System.out.println("----CÂU 7 ---");
+//		System.out.println("----CÂU 7----");
+//		System.out.println(airPlaneService.countHasName("boeing"));
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 8----");
+//		System.out.println("Tổng số lương phải trả cho nhân viên là : " + emplService.getTotalSalaryEmployee());
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 9----");
+//		certification.getIDPilotBoeing().forEach(System.out::println);
+		System.out.println("==========================================================================================");
+		System.out.println("----CÂU 10----");
 	}
 }

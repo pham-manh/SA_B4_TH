@@ -12,4 +12,7 @@ public interface EmployeeReponsitpry extends JpaRepository<Nhanvien, String> {
 	
 	@Query(value = "select * from Nhanvien where Luong < ?1", nativeQuery = true)
 	public List<Nhanvien> listSalaryLower (int maxSalary);
+	
+	@Query(value = "select sum(Nhanvien .luong) from Nhanvien ",nativeQuery = true)
+	public double getTotalSalaryEmployee();
 }

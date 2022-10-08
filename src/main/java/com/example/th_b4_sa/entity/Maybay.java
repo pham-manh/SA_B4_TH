@@ -34,9 +34,7 @@ public class Maybay {
 			inverseJoinColumns = @JoinColumn(name = "MaNV"))
 	@ToString.Exclude
 	private Set<Nhanvien> nhanviens = new LinkedHashSet<>();
-	public Integer getId () {
-		return id;
-	}
+
 	
 	
 }

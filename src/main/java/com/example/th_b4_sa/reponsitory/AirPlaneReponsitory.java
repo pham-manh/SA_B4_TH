@@ -16,4 +16,9 @@ public interface AirPlaneReponsitory extends JpaRepository<Maybay, Integer> {
 	@Query(value = "select count(distinct(Loai))from maybay where Loai like upper(concat('%',?1,'%'))", nativeQuery = true)
 	public int countHasName (String name);
 	
+	@Query(value = "select maybay.MaMB from chungnhan " +
+			"inner join maybay on chungnhan.MaMB = maybay.MaMB " +
+			"inner JOIN nhanvien on nhanvien.MaNV = chungnhan.MaNV where nhanvien.Ten like upper(concat(?1,'%'))"
+			, nativeQuery = true)
+	public List<?> getIDPlanePilotWithFNameFly (String name);
 }

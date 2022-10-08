@@ -14,7 +14,7 @@ public interface FlightReponsitory extends JpaRepository<Chuyenbay, String> {
 	public List<Chuyenbay> listFlightEndByName (String name); //1
 	
 	@Query(value = "select * from chuyenbay where DoDai between ?2 and ?1", nativeQuery = true)
-	public List<Chuyenbay> listFlightPathRangeBeetwen (int maxRange, int minRange); //4
+	public List<Chuyenbay> listFlightPathRangeBetween (int maxRange, int minRange); //4
 	
 	@Query(value = "select COUNT(*) from chuyenbay where GaDi like ?1 and GaDen like ?2",nativeQuery = true)
 	public int contBYStartAndEndAirPortName(String start,String end);

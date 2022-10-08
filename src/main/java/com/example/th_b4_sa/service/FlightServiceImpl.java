@@ -18,8 +18,8 @@ public class FlightServiceImpl {
 		return flightReponsitory.listFlightEndByName(name);
 	}
 	
-	public List<Chuyenbay> listFlightPathRangeBeetwen (int maxRange, int minRange) {
-		return flightReponsitory.listFlightPathRangeBeetwen(maxRange, minRange);
+	public List<Chuyenbay> listFlightPathRangeBetween (int maxRange, int minRange) {
+		return flightReponsitory.listFlightPathRangeBetween(maxRange, minRange);
 	}
 	
 	public String contBYStartAndEndAirPortName (String start, String end) {

@@ -37,7 +37,7 @@ public class ThB4SaApplication implements CommandLineRunner {
 //		emplService.listSalaryLower(10000).forEach(System.out::println);
 //		System.out.println("==========================================================================================");
 //		System.out.println("----CÂU 4----");
-//		flightService.listFlightPathRangeBeetwen(10000,8000).forEach(System.out::println);
+//		flightService.listFlightPathRangeBetween(10000, 8000).forEach(System.out::println);
 //		System.out.println("==========================================================================================");
 //		System.out.println("----CÂU 5----");
 //		System.out.println(flightService.contBYStartAndEndAirPortName("sgn","bmv"));
@@ -53,7 +53,15 @@ public class ThB4SaApplication implements CommandLineRunner {
 //		System.out.println("==========================================================================================");
 //		System.out.println("----CÂU 9----");
 //		certification.getIDPilotBoeing().forEach(System.out::println);
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 10----");
+//		certification.getIDPilotFlyIDPlane("747").forEach(System.out::println);
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 11----");
+//		airPlaneService.getIDPlanePilotWithFNameFly("nguyen").forEach(System.out::println);
 		System.out.println("==========================================================================================");
-		System.out.println("----CÂU 10----");
+		System.out.println("----CÂU 12----");
+		certification.getIDPilotFly("boeing","airbus").forEach(System.out::println);
+		
 	}
 }

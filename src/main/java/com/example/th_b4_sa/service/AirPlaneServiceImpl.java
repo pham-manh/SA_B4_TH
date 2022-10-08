@@ -21,4 +21,8 @@ public class AirPlaneServiceImpl {
 		return "There are "+airPlaneReponsitory.countHasName(name)+
 				" types of aircraft named "+name.toUpperCase(Locale.ROOT);
 	}
+	
+	public List<?> getIDPlanePilotWithFNameFly (String name) {
+		return airPlaneReponsitory.getIDPlanePilotWithFNameFly (name);
+	}
 }

@@ -21,4 +21,8 @@ public interface AirPlaneReponsitory extends JpaRepository<Maybay, Integer> {
 			"inner JOIN nhanvien on nhanvien.MaNV = chungnhan.MaNV where nhanvien.Ten like upper(concat(?1,'%'))"
 			, nativeQuery = true)
 	public List<?> getIDPlanePilotWithFNameFly (String name);
+	
+	@Query(value = "select Loai from maybay where TamBay > (select DoDai from chuyenbay where MaCB= ?1)"
+			,nativeQuery = true)
+	public List<?> getListAirPlaneCanFlyWithFlightID(String FlightID);
 }

@@ -6,16 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class EmplServiceImpl {
 	@Autowired
 	EmployeeReponsitpry employeeReponsitpry;
 	
-	public List<Nhanvien> listSalaryLower (int maxSalary){
+	public List<Nhanvien> listSalaryLower (int maxSalary) {
 		return employeeReponsitpry.listSalaryLower(maxSalary);
 	}
 	
-	public Double getTotalSalaryEmployee(){
+	public Double getTotalSalaryEmployee () {
 		return employeeReponsitpry.getTotalSalaryEmployee();
+	}
+	
+	public List<String> getPilotNameWithAirPlaneName (String airPlaneName) {
+		return employeeReponsitpry.getPilotNameWithAirPlaneName(airPlaneName);
+	}
+	
+	public List<Object[]> CountPilotWithAirPlaneType(){
+		return employeeReponsitpry.CountPilotWithAirPlaneType();
 	}
 }

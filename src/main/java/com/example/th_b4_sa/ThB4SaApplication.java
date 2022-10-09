@@ -9,6 +9,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.List;
+
 @SpringBootApplication
 public class ThB4SaApplication implements CommandLineRunner {
 	@Autowired
@@ -59,9 +61,27 @@ public class ThB4SaApplication implements CommandLineRunner {
 //		System.out.println("==========================================================================================");
 //		System.out.println("----CÂU 11----");
 //		airPlaneService.getIDPlanePilotWithFNameFly("nguyen").forEach(System.out::println);
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 12----");
+//		certification.getIDPilotFly("boeing","airbus").forEach(System.out::println);
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 13----");
+//		airPlaneService.getListAirPlaneCanFlyWithFlightID("VN280").forEach(System.out::println);
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 14----");
+//		flightService.getFlightWithAirPlaneName("Airbus A320").forEach(System.out::println);
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 15----");
+//		emplService.getPilotNameWithAirPlaneName("boeing").forEach(System.out::println);
 		System.out.println("==========================================================================================");
-		System.out.println("----CÂU 12----");
-		certification.getIDPilotFly("boeing","airbus").forEach(System.out::println);
+		System.out.println("----CÂU 16---");
+		List<Object[]> objs = emplService.CountPilotWithAirPlaneType();
+		System.out.format("%-15s %-32s %-15s %-15s", "ID", "Name", "FlyRange", "Number Pilot");
+		System.out.println();
+		objs.forEach(objects -> {
+			System.out.format("%-15s %-32s %-15s %-15s", objects[0], objects[1], objects[2], objects[3]);
+			System.out.println();
+		});
 		
 	}
 }

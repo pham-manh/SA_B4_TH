@@ -25,4 +25,10 @@ public class AirPlaneServiceImpl {
 	public List<?> getIDPlanePilotWithFNameFly (String name) {
 		return airPlaneReponsitory.getIDPlanePilotWithFNameFly (name);
 	}
+	
+	public List<?> getListAirPlaneCanFlyWithFlightID(String FlightID){
+		return airPlaneReponsitory.getListAirPlaneCanFlyWithFlightID(FlightID);
+	}
+	
+	
 }

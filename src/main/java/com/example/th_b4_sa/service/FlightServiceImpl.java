@@ -31,4 +31,10 @@ public class FlightServiceImpl {
 		return "There are " + flightReponsitory.contBYStartAirPortName(start)
 				+ " flights from " + start.toUpperCase(Locale.ROOT);
 	}
+	
+	public List<?> getFlightWithAirPlaneName (String name) {
+		return flightReponsitory.getFlightWithAirPlaneName(name);
+	}
+	
+
 }

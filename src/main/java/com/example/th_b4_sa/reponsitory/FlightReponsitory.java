@@ -26,5 +26,20 @@ public interface FlightReponsitory extends JpaRepository<Chuyenbay, String> {
 			, nativeQuery = true)
 	public List<Chuyenbay> getFlightWithAirPlaneName (String name); //c15
 	
-
+	@Query(value = "select distinct chuyenbay.* from chuyenbay " +
+			"inner join maybay " +
+			"where maybay.TamBay > (chuyenbay.DoDai * 2)"
+			, nativeQuery = true)
+	public List<Chuyenbay> getFligitCanRoundTrip ();
+	
+	@Query(value = "select  GaDi,count(GaDi) from chuyenbay group by GaDi", nativeQuery = true)
+	public List<Object[]> getNumberFlightByAirPort ();
+	
+	@Query(value = "select GaDi, sum(ChiPhi) from chuyenbay group by GaDi", nativeQuery = true)
+	public List<Object[]> getCostByAirport ();
+	
+	@Query(value = "select * from chuyenbay where GioDi < ?1",nativeQuery = true)
+	public List<Chuyenbay> getFlightDepartureBefore(String time);
+	@Query(value = "select chuyenbay.GaDi,count(GaDi) from chuyenbay where GioDi < ?1 group by GaDi",nativeQuery = true)
+	public List<Object[]> getNumberFlightDepartureBeforeByAirPort(String time);
 }

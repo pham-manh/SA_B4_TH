@@ -73,15 +73,43 @@ public class ThB4SaApplication implements CommandLineRunner {
 //		System.out.println("==========================================================================================");
 //		System.out.println("----CÂU 15----");
 //		emplService.getPilotNameWithAirPlaneName("boeing").forEach(System.out::println);
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 16---");
+//		List<Object[]> objs = emplService.CountPilotWithAirPlaneType();
+//		System.out.format("%-15s %-32s %-15s %-15s", "ID", "Name", "FlyRange", "Number Pilot");
+//		objs.forEach(objects -> {
+//			System.out.format("%-15s %-32s %-15s %-15s", objects[0], objects[1], objects[2], objects[3]);
+//			System.out.println();
+//		});
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 17---");
+//		flightService.getFligitCanRoundTrip().forEach(System.out::println);
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 18---");
+//		List<Object[]> objs = flightService.getNumberFlightByAirPort();
+//		
+//		System.out.format("%-15s%-3s\n", "AirPort", "Number Fight");
+//		objs.forEach(objects -> {
+//			System.out.format("%-15s %-3s\n", objects[0], objects[1]);
+//		});
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 19---");
+//		List<Object[]> objs = flightService.getCostByAirport();
+//		System.out.format("%-15s%-3s\n", "AirPort", "Cost");
+//		objs.forEach(objects -> {
+//			System.out.format("%-15s %-3s\n", objects[0], objects[1]);
+//		});
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 20---");
+//		flightService.getFlightDepartureBefore("12:00")
+//				.forEach(System.out::println);
 		System.out.println("==========================================================================================");
-		System.out.println("----CÂU 16---");
-		List<Object[]> objs = emplService.CountPilotWithAirPlaneType();
-		System.out.format("%-15s %-32s %-15s %-15s", "ID", "Name", "FlyRange", "Number Pilot");
-		System.out.println();
+		System.out.println("----CÂU 21---");
+		String time = "12:00";
+		List<Object[]> objs = flightService.getNumberFlightDepartureBeforeByAirPort(time);
+		System.out.format("%-15s%-3s\n", "AirPort", "Number Flight Departure Before " + time);
 		objs.forEach(objects -> {
-			System.out.format("%-15s %-32s %-15s %-15s", objects[0], objects[1], objects[2], objects[3]);
-			System.out.println();
+			System.out.format("%-15s %-3s\n", objects[0], objects[1]);
 		});
-		
 	}
 }

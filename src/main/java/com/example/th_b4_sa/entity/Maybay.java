@@ -28,11 +28,10 @@ public class Maybay {
 	@Column(name = "TamBay")
 	private Integer tamBay;
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "chungnhan",
 			joinColumns = @JoinColumn(name = "MaMB"),
 			inverseJoinColumns = @JoinColumn(name = "MaNV"))
-	@ToString.Exclude
 	private Set<Nhanvien> nhanviens = new LinkedHashSet<>();
 
 	

@@ -24,7 +24,44 @@ public class EmplServiceImpl {
 		return employeeReponsitpry.getPilotNameWithAirPlaneName(airPlaneName);
 	}
 	
-	public List<Object[]> CountPilotWithAirPlaneType(){
+	public List<Object[]> CountPilotWithAirPlaneType () {
 		return employeeReponsitpry.CountPilotWithAirPlaneType();
 	}
+	
+	public List<String> getIDPilotDrive3TypeAirPlane () {
+		return employeeReponsitpry.getIDPilotDrive3TypeAirPlane();
+	}
+	
+	;
+	
+	public List<Object[]> getPilotFlyGreat3TypeWithRangeFlyMax () {
+		return employeeReponsitpry.getPilotFlyGreat3TypeWithRangeFlyMax();
+	}
+	
+	;
+	
+	public List<Object[]> getNumberTypePilotDrive () {
+		return employeeReponsitpry.getNumberTypePilotDrive();
+	}
+	
+	;
+	
+	public List<Nhanvien> getEmplNotAPilot () {
+		return employeeReponsitpry.getEmplNotAPilot();
+	}
+	
+	;
+	
+	public List<String> getIDEmplHighestSalary () {
+		return employeeReponsitpry.getIDEmplHighestSalary();
+	}
+	
+	;
+	
+	public List<String> totalSalaryPilot () {
+		return employeeReponsitpry.totalSalaryPilot();
+	};
+	
+	
+	
 }

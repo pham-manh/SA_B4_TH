@@ -103,13 +103,42 @@ public class ThB4SaApplication implements CommandLineRunner {
 //		System.out.println("----CÂU 20---");
 //		flightService.getFlightDepartureBefore("12:00")
 //				.forEach(System.out::println);
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 21---");
+//		String time = "12:00";
+//		List<Object[]> objs = flightService.getNumberFlightDepartureBeforeByAirPort(time);
+//		System.out.format("%-15s%-3s\n", "AirPort", "Number Flight Departure Before " + time);
+//		objs.forEach(objects -> {
+//			System.out.format("%-15s %-3s\n", objects[0], objects[1]);
+//		});
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 22---");
+//		emplService.getIDPilotDrive3TypeAirPlane().forEach(System.out::println);
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 23---");
+//		List<Object[]> objs = emplService.getPilotFlyGreat3TypeWithRangeFlyMax();
+//		System.out.format("%-15s%-8s\n", "ID Pilot", "Max Flight Range ");
+//		objs.forEach(objects -> {
+//			System.out.format("%-15s%-8s\n", objects[0], objects[1]);
+//		});
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 24----");
+//		List<Object[]> objs = emplService.getNumberTypePilotDrive();
+//		System.out.format("%-15s%-8s\n", "ID Pilot", "Number Type Can Drive");
+//		objs.forEach(objects -> {
+//			System.out.format("%-15s%-8s\n", objects[0], objects[1]);
+//		});
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 25----");
+//		emplService.getEmplNotAPilot().forEach(System.out::println);
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 26----");
+//		emplService.getIDEmplHighestSalary().forEach(System.out::println);
+//		System.out.println("==========================================================================================");
+//		System.out.println("----CÂU 27----");
+//		System.out.println("total salary"+emplService.totalSalaryPilot());
 		System.out.println("==========================================================================================");
-		System.out.println("----CÂU 21---");
-		String time = "12:00";
-		List<Object[]> objs = flightService.getNumberFlightDepartureBeforeByAirPort(time);
-		System.out.format("%-15s%-3s\n", "AirPort", "Number Flight Departure Before " + time);
-		objs.forEach(objects -> {
-			System.out.format("%-15s %-3s\n", objects[0], objects[1]);
-		});
+		System.out.println("----CÂU 28----");
+		flightService.getFlightCanFlyAllAirPlaneByType("boeing").forEach(System.out::println);
 	}
 }

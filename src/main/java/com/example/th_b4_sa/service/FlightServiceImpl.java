@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
 
 @Service
 public class FlightServiceImpl {
@@ -37,23 +36,29 @@ public class FlightServiceImpl {
 		return flightReponsitory.getFlightWithAirPlaneName(name);
 	}
 	
-	public List<Chuyenbay> getFligitCanRoundTrip(){
+	public List<Chuyenbay> getFligitCanRoundTrip () {
 		return flightReponsitory.getFligitCanRoundTrip();
-	};
+	}
 	
-	public List<Object[]> getNumberFlightByAirPort(){
+	;
+	
+	public List<Object[]> getNumberFlightByAirPort () {
 		return flightReponsitory.getNumberFlightByAirPort();
-	};
+	}
 	
-	
-	public List<Object[]> getCostByAirport (){
+	public List<Object[]> getCostByAirport () {
 		return flightReponsitory.getCostByAirport();
 	}
 	
-	public List<Chuyenbay> getFlightDepartureBefore(String time){
+	public List<Chuyenbay> getFlightDepartureBefore (String time) {
 		return flightReponsitory.getFlightDepartureBefore(time);
 	}
-	public List<Object[]> getNumberFlightDepartureBeforeByAirPort(String time){
+	
+	public List<Object[]> getNumberFlightDepartureBeforeByAirPort (String time) {
 		return flightReponsitory.getNumberFlightDepartureBeforeByAirPort(time);
-	};
+	}
+	
+	public List<Chuyenbay> getFlightCanFlyAllAirPlaneByType (String name) {
+		return flightReponsitory.getFlightCanFlyAllAirPlaneByType(name);
+	}
 }
